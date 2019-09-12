@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background_color"
+    android:fitsSystemWindows="true"
+    android:id="@+id/ll_main"
+    android:clipChildren="false">
+
+
+    <FrameLayout
+
+        android:id="@+id/framelayout"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+
+        />
+
+    <!--中间为一条分割线-->
+
+    <View
+
+        android:background="#E1E1E1"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="0.5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
+
+        <RadioGroup
+            android:background="#FFFFFF"
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:clipChildren="false"
+            >
+
+
+
+            <RadioButton
+                android:id="@+id/radio_schedule"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:drawableTop="@drawable/table_second_btn"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:text="日程"
+                android:textColor="@drawable/radio_text_color"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioButton
+                android:id="@+id/radio_workbench"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:drawableTop="@drawable/table_first_btn"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:paddingLeft="0dp"
+                android:text="项目"
+                android:textColor="@drawable/radio_text_color"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                />
+
+
+
+            <!--</LinearLayout>-->
+
+            <!--给中间凸起按钮预留位置-->
+
+            <!--<LinearLayout-->
+
+                <!--android:layout_width="0dp"-->
+
+                <!--android:layout_height="wrap_content"-->
+
+                <!--android:layout_weight="1"-->
+
+                <!--android:gravity="center">-->
+
+            <!--</LinearLayout>-->
+
+            <!-- 这里直接给其设置高度 让其超过父亲布局的56dp-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="8dp">
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/new_build"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:textColor="@color/text_color"
+                    android:text="新建"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
+            <RadioButton
+                android:id="@+id/radio_communication"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:drawableTop="@drawable/table_third_btn"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:paddingLeft="0dp"
+                android:text="交流"
+                android:textColor="@drawable/radio_text_color"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+
+            <RadioButton
+                android:id="@+id/radio_mine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:drawableTop="@drawable/table_fourth_btn"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:paddingLeft="0dp"
+                android:text="我的"
+                android:textColor="@drawable/radio_text_color"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignTop="@+id/radioGroup"
+            android:layout_marginTop="0dp"
+            android:background="#00000000"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_msg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_my"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+    <!--<ImageView-->
+
+        <!--android:layout_width="40dp"-->
+
+        <!--android:layout_height="40dp"-->
+
+        <!--android:layout_marginTop="-48dp"-->
+
+       <!--android:layout_gravity="center_horizontal"-->
+
+        <!--android:id="@+id/iv_add"-->
+
+        <!--android:src="@drawable/new001"/>-->
+
+
+
+</LinearLayout>

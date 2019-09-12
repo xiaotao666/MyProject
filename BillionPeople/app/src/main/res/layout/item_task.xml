@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:swipeEnable="true"
+        app:leftSwipe="true"
+        app:ios="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:visibility="gone"
+                android:id="@+id/cb_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/choose_person"
+                android:checked="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="15dp">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="合同审批"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_color"/>
+
+                        <TextView
+                            android:id="@+id/tv_manager"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="负责人:"
+                            android:textSize="11sp"
+                            android:layout_marginTop="13dp"
+                            android:textColor="#888888"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#888888"
+                        android:textSize="12sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="9dp"
+                        android:layout_marginTop="12dp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divide_line_color"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 以下都是侧滑菜单的内容依序排列 -->
+        <Button
+        android:id="@+id/btn_set"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:background="#FE9B00"
+        android:text="人员设置"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_delay"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#32B16C"
+            android:clickable="true"
+            android:text="延期"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#FF3434"
+            android:text="退案"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"/>
+
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/main_background_color">
+
+    <include layout="@layout/main_titlebar"/>
+    <include layout="@layout/layout_load_fail"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/green_item">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                app:tabMode="scrollable"
+                app:tabGravity="fill"
+                app:tabTextColor="#7CE3FF"
+                app:tabSelectedTextColor="#FFFFFF"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorHeight="2dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1">
+
+            </android.support.design.widget.TabLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:src="@drawable/shadow"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_tag"
+                android:layout_width="42dp"
+                android:layout_height="32dp">
+
+                <ImageView
+                    android:id="@+id/iv_tab_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/down_arrow_white"
+                    android:layout_centerInParent="true"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+
+</LinearLayout>

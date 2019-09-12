@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:alpha="0.9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="39dp">
+
+        <TextView
+            android:id="@+id/tv_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="项目"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"
+            android:drawableTop="@drawable/cases"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="放款"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"
+            android:drawableTop="@drawable/loan"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_saved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保后"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"
+            android:drawableTop="@drawable/saved"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_archives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="档案"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"
+            android:drawableTop="@drawable/archives"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_exit"
+            android:src="@drawable/new_expand"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

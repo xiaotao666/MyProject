@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.mine.AboutActivity"
+    android:orientation="vertical"
+    android:background="@color/main_background_color"
+    android:fitsSystemWindows="true">
+
+    <!--<include layout="@layout/main_titlebar"/>-->
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="6dp"
+        android:text="亿人担保"
+        android:layout_gravity="center_horizontal"
+        android:lineSpacingExtra="5dp"
+        android:textColor="#444444"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V1.0.0"
+        android:layout_marginTop="74dp"
+        android:textSize="13sp"
+        android:textColor="#444444"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

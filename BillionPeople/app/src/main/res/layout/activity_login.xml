@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.LoginActivity"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/main_background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/green_item"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="56dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="273dp"
+        android:layout_height="273dp"
+        android:orientation="vertical"
+        android:background="@drawable/login_white_circle_corner"
+        android:layout_marginTop="-117dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号登录"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="27dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/et_account"
+            android:layout_width="233dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@color/white"
+            android:gravity="left"
+            android:hint="请输入用户名"
+            android:textSize="13sp"
+            android:textColor="@color/text_color"/>
+
+        <View
+            android:layout_width="233dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/divide_line_color"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="233dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="29dp"
+            android:background="@color/white"
+            android:gravity="left"
+            android:hint="请输入密码"
+            android:textSize="13sp"
+            android:textColor="@color/text_color"/>
+
+        <View
+            android:layout_width="233dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/divide_line_color"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="233dp"
+            android:layout_height="36dp"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="49dp"
+            android:background="@drawable/btn_green_circle_corner"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wechat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信登录"
+            android:textColor="#888888"
+            android:textSize="11sp"
+            android:layout_marginTop="9dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

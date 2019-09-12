@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.cases.EditIntroActivity"
+    android:orientation="vertical"
+    android:background="@color/main_background_color"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/commit_titlebar"/>
+
+    <com.jsyrdb.yiren.utils.ClearEditText
+        android:id="@+id/et_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_circle_corner"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical"
+        android:minHeight="30dp"
+        android:maxLength="30"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/text_color"
+        android:textSize="14sp"/>
+
+</LinearLayout>

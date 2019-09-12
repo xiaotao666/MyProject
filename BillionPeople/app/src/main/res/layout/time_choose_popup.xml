@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_white_circle_corner"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_current_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"
+                android:text="2019年7月"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:month_view="com.jsyrdb.yiren.widget.MyMonthView"
+        app:current_month_lunar_text_color="#CFCFCF"
+        app:current_month_text_color="#000000"
+        app:other_month_text_color="#CFCFCF"
+        app:other_month_lunar_text_color="#CFCFCF"
+        app:scheme_text_color="#000000"
+        app:scheme_theme_color="#FF0000"
+        app:scheme_lunar_text_color="#000000"
+        app:selected_lunar_text_color="@color/white"
+        app:selected_text_color="@color/white"
+        app:selected_theme_color="@color/green_item"
+        app:week_background="@color/white"
+        app:week_text_color="#000000"
+        app:week_text_size="14sp"
+        app:week_view="com.jsyrdb.yiren.widget.MyWeekView"
+        app:month_view_show_mode="mode_only_current"
+        app:current_day_text_color="#EB1D2E"
+        app:current_day_lunar_text_color="@color/green_item"
+        app:day_text_size="14sp"
+        app:lunar_text_size="8sp"
+        app:calendar_height="36dp"
+        app:calendar_padding="20dp"
+        android:paddingBottom="10dp"
+        app:select_mode="single_mode" />
+
+</LinearLayout>

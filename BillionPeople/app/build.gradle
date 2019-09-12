@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.jsyrdb.yiren"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //腾讯浏览服务实现支持64位手机加载X5
+        // Specifies the ABI configurations of your native
+        // libraries Gradle should build and package with your APK.
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.haibin:calendarview:3.6.6'//日历
+    implementation files('libs/tbs_sdk_thirdapp_v4.3.0.1072_43646_sharewithdownloadwithfile_withoutGame_obfs_20190429_175122.jar')
+//tbs腾讯浏览服务
+    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'//仿qq侧滑
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation 'com.github.donkingliang:LabelsView:1.4.7'//标签
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-26'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-26'//没有使用特殊Header，可以不加这行
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+    implementation 'com.auth0.android:jwtdecode:1.3.0'
+    implementation "org.java-websocket:Java-WebSocket:1.4.0"
+    implementation 'com.neovisionaries:nv-websocket-client:2.9'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation ('io.socket:socket.io-client:1.0.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    implementation 'q.rorbin:badgeview:1.1.3'//小红点
+    implementation 'com.youth.banner:banner:1.4.10'
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency
+            { DependencyResolveDetails details ->
+                def requested = details.requested
+                if (requested.group == 'com.android.support') {
+                    if (!requested.name.startsWith("multidex")) {
+                        details.useVersion '27.1.1'
+                    }
+                }
+            }
+}

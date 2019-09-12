@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:id="@+id/ll_parent"
+    android:background="@color/main_background_color">
+
+    <include layout="@layout/main_titlebar"/>
+
+    <com.youth.banner.Banner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="99dp">
+
+    </com.youth.banner.Banner>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color"
+        android:layout_marginTop="9dp"/>
+    <LinearLayout
+        android:id="@+id/ll_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            />
+
+        <TextView
+            android:id="@+id/tv_current_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"
+            android:text="1月1日"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/down_arrow_black"
+            android:layout_marginLeft="9dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"
+            android:text="星期一"/>
+
+    </LinearLayout>
+
+    <com.jsyrdb.yiren.widget.MyRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id="@+id/refreshLayout">
+    <com.haibin.calendarview.CalendarLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:default_status="shrink"
+        app:calendar_content_view_id="@+id/rl_parent"
+        android:background="@color/main_background_color">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:month_view="com.jsyrdb.yiren.widget.MyMonthView"
+            app:current_month_lunar_text_color="#CFCFCF"
+            app:current_month_text_color="#000000"
+            app:other_month_text_color="#CFCFCF"
+            app:other_month_lunar_text_color="#CFCFCF"
+            app:scheme_text_color="#000000"
+            app:scheme_theme_color="#FF0000"
+            app:scheme_lunar_text_color="#000000"
+            app:selected_lunar_text_color="@color/white"
+            app:selected_text_color="@color/white"
+            app:selected_theme_color="@color/green_item"
+            app:week_background="@color/white"
+            app:week_text_color="#000000"
+            app:week_text_size="14sp"
+            app:week_view="com.jsyrdb.yiren.widget.MyWeekView"
+            app:month_view_show_mode="mode_only_current"
+            app:current_day_text_color="@color/green_item"
+            app:current_day_lunar_text_color="@color/green_item"
+            app:day_text_size="14sp"
+            app:calendar_height="30dp"
+            app:calendar_padding="15dp"
+            app:select_mode="single_mode"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <RelativeLayout
+                android:id="@+id/rl_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="6dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/calendar_arrow"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/lv_case"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:divider="@null"-->
+            <!--android:background="@color/main_background_color"-->
+            <!--android:layout_marginBottom="10dp">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rl_arrow">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@color/main_background_color">
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/ll_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp">
+                            <TextView
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:text="已开始"
+                                android:background="@drawable/bg_yellow_circlr_corner"
+                                android:textSize="13dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp"/>
+                            <com.jsyrdb.yiren.widget.ExpandListView
+                                android:id="@+id/lv_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                >
+
+                            </com.jsyrdb.yiren.widget.ExpandListView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/ll_be_complete"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            >
+                            <TextView
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:text="应完成"
+                                android:background="@drawable/bg_red_circle_corner"
+                                android:textSize="13dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp"/>
+                            <com.jsyrdb.yiren.widget.ExpandListView
+                                android:id="@+id/lv_be_complete"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                >
+
+                            </com.jsyrdb.yiren.widget.ExpandListView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/ll_not_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="15dp">
+                            <TextView
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:textSize="13dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:text="未开始"
+                                android:background="@drawable/bg_blue_cirvle_corner"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp"/>
+                            <com.jsyrdb.yiren.widget.ExpandListView
+                                android:id="@+id/lv_not_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@null"
+                                android:dividerHeight="0dp">
+
+                            </com.jsyrdb.yiren.widget.ExpandListView>
+                        </LinearLayout>
+                        <include layout="@layout/layout_nothing"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+    </com.haibin.calendarview.CalendarLayout>
+
+    </com.jsyrdb.yiren.widget.MyRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_white_circle_corner">
+
+        <TextView
+
+            android:id="@+id/tv_remote_file"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="远程文件"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divide_line_color"/>
+
+        <TextView
+            android:id="@+id/tv_local_file"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="本地文件"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_white_circle_corner"
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="取消"
+        android:textColor="@color/green_item"
+        android:textSize="14sp"
+        android:gravity="center"/>
+</LinearLayout>

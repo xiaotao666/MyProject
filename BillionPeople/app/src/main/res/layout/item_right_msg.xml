@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/logo"
+        android:background="@drawable/bg_white_circle_corner"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="9dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_text"
+        android:layout_toLeftOf="@+id/iv_head"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:background="@drawable/bg_chat_myself"
+        android:text="啦啦啦啦啦啦啦啦啦阿拉啦啦啦"
+        android:textColor="@color/text_color"
+        android:textSize="13sp"
+        android:minHeight="36dp"
+        android:maxWidth="241dp"
+        android:gravity="center|left"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_file"
+        android:layout_marginTop="9dp"
+        android:layout_toLeftOf="@+id/iv_head"
+        android:layout_marginRight="8dp"
+        android:layout_width="182dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_white_circle_corner"
+        >
+
+        <TextView
+            android:id="@+id/tv_fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="财务报表.xlsx"
+            android:textSize="13sp"
+            android:textColor="@color/text_color"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/file"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
